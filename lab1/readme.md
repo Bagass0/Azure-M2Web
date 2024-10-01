@@ -2,14 +2,14 @@
 
 ### Interface Azure
 
-##### Création Ressource Group + VM
+#### Création Ressource Group + VM
 ![Image 1](./2.png)
 ![Image 2](./3.png)
 ![Image 3](./4.png)
 ![Image 1](./1.png)
-##### Connection ssh
+#### Connection ssh
 ![Image 2](./5.png)
-##### Install tree
+#### Install tree
 ![Image 3](./6.png)
 
 ### Équivalent en Azure CLI
