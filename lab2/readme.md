@@ -2,14 +2,20 @@
 
 ### Interface Azure
 
-#### Création Ressource Group + VM
+#### Création d'un réseau virtuel
 ![Image 1](./1.png)
 ![Image 2](./2.png)
+#### Ajout de sous réseau/x
 ![Image 3](./3.png)
+#### Création d'un NSG(Network security group) ou Groupe de sécurité réseau
 ![Image 4](./4.png)
+#### Ouverture du port ssh(22) dans le groupe
 ![Image 5](./5.png)
+#### Ajout d'un Réseau et d'un sous réseau au NSG
 ![Image 6](./6.png)
+#### Création d'une nouvelle VM que l'on vas déployer dans notre nouveau réseau virtuel
 ![Image 7](./7.png)
+#### Création d'un nouveau réseau virtuel(VNET2) puis peering entre les réseaux
 ![Image 7](./8.png)
 
 
