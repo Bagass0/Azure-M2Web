@@ -11,7 +11,7 @@
 ![Image 4](./4.png)
 #### Ouverture du port ssh(22) dans le groupe
 ![Image 5](./5.png)
-#### Ajout d'un Réseau et d'un sous réseau au NSG
+#### Ajout d'un réseau et d'un sous réseau au NSG
 ![Image 6](./6.png)
 #### Création d'une nouvelle VM que l'on vas déployer dans notre nouveau réseau virtuel
 ![Image 7](./7.png)
