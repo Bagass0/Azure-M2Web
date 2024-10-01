@@ -6,8 +6,8 @@
 ![Image 2](./3.png)
 ![Image 3](./1.png)
 ![Image 1](./4.png)
-![Image 2](./5.png)
-![Image 3](./6.png)
+![Image 2](./6.png)
+![Image 3](./5.png)
 
 ### Équivalent en Azure CLI
 
