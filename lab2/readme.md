@@ -2,31 +2,23 @@
 
 ### Interface Azure
 
-#### Création d'un réseau virtuel
+### Création d'un réseau virtuel
 ![Image 1](./1.png)
 ![Image 2](./2.png)
-#### Ajout de sous réseau/x
-![Image 3](./3.png)
-#### Création d'un NSG(Network security group) ou Groupe de sécurité réseau
-![Image 4](./4.png)
-#### Ouverture du port ssh(22) dans le groupe
-![Image 5](./5.png)
-#### Ajout d'un réseau et d'un sous réseau au NSG
-![Image 6](./6.png)
-#### Création d'une nouvelle VM que l'on vas déployer dans notre nouveau réseau virtuel
-![Image 7](./7.png)
-#### Création d'un nouveau réseau virtuel(VNET2) puis peering entre les réseaux
-![Image 7](./8.png)
 
 
-### Équivalent en Azure CLI
-
+#### Équivalent en Azure CLI
 ```bash
 az network vnet create \
   --resource-group <VotreResourceGroup> \
   --name <NomDuVNet> \
   --address-prefixes 10.0.0.0/16
+``` 
+### Ajout de sous réseau/x
+![Image 3](./3.png)
 
+#### Équivalent en Azure CLI
+```bash
 az network vnet subnet create \
   --resource-group <VotreResourceGroup> \
   --vnet-name <NomDuVNet> \
@@ -38,11 +30,21 @@ az network vnet subnet create \
   --vnet-name <NomDuVNet> \
   --name Subnet2 \
   --address-prefix 10.0.2.0/24
+``` 
+### Création d'un NSG(Network security group) ou Groupe de sécurité réseau
+![Image 4](./4.png)
 
+#### Équivalent en Azure CLI
+```bash
 az network nsg create \
   --resource-group <VotreResourceGroup> \
   --name NSG1
+``` 
+### Ouverture du port ssh(22) dans le groupe
+![Image 5](./5.png)
 
+#### Équivalent en Azure CLI
+```bash
 az network nsg rule create \
   --resource-group <VotreResourceGroup> \
   --nsg-name NSG1 \
@@ -55,7 +57,12 @@ az network nsg rule create \
   --destination-address-prefixes '*' \
   --destination-port-ranges 22 \
   --access Allow
+``` 
+### Ajout d'un réseau et d'un sous réseau au NSG
+![Image 6](./6.png)
 
+#### Équivalent en Azure CLI
+```bash
 az network vnet subnet update \
   --resource-group <VotreResourceGroup> \
   --vnet-name <NomDuVNet> \
@@ -67,7 +74,12 @@ az network vnet subnet update \
   --vnet-name <NomDuVNet> \
   --name Subnet2 \
   --network-security-group NSG1
+``` 
+### Création d'une nouvelle VM que l'on vas déployer dans notre nouveau réseau virtuel
+![Image 7](./7.png)
 
+#### Équivalent en Azure CLI
+```bash
   az vm create \
   --resource-group <VotreResourceGroup> \
   --name VM1 \
@@ -87,7 +99,12 @@ az vm create \
   --vnet-name <NomDuVNet> \
   --subnet Subnet2 \
   --public-ip-address ""
+``` 
+### Création d'un nouveau réseau virtuel(VNET2) puis peering entre les réseaux
+![Image 7](./8.png)
 
+#### Équivalent en Azure CLI
+```bash
   az network vnet create \
   --resource-group <VotreResourceGroup> \
   --name VNet2 \
@@ -108,6 +125,7 @@ az network vnet peering create \
   --vnet-name VNet2 \
   --remote-vnet <NomDuVNet> \
   --allow-vnet-access
+``` 
 
 
 
