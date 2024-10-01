@@ -1,8 +1,6 @@
 # Lab 3: Deploying Azure App Service Web Apps
 
-### Interface Azure
-
-#### 1. Créer un App Service plan
+### 1. Créer un App Service plan
 ![Image 1](./1.png)   
 
 
@@ -14,7 +12,7 @@ az appservice plan create \
   --sku S1 --is-linux
 ```
 
-#### 2. Créer une Web App
+### 2. Créer une Web App
 ![Image 2](./2.png)
 
 #### Équivalent en Azure CLI
@@ -26,7 +24,7 @@ az webapp create \
   --runtime "DOTNETCORE|3.1"
 ```
 
-#### 3. Configurer des domaines personnalisés et certificats SSL
+### 3. Configurer des domaines personnalisés et certificats SSL
 Fail, Azure plan issue.
 
 
@@ -44,7 +42,7 @@ az webapp ssl bind \
   --ssl-type SNI  
 ```
 
-#### 4. Implémenter des slots de déploiement pour le staging et la production
+### 4. Implémenter des slots de déploiement pour le staging et la production
 ![Image 3](./3.png)
 
 
