@@ -53,10 +53,7 @@ az keyvault secret show \
 
 ## 3. Integrate Key Vault with an Application for Secret Management
 
-### Azure Portal
-![Image 1](./1.png)
-
-### Equivalent in Azure CLI
+### Azure CLI
 ```bash
 az keyvault set-policy \
   --name <YourKeyVaultName> \
@@ -85,7 +82,7 @@ print(f"Retrieved secret: {retrieved_secret.value}")
 ## 4. Set Up Access Policies and Monitoring
 
 ### Azure Portal
-![Image 1](./1.png)
+![Image 1](./6.png)
 
 ### Equivalent in Azure CLI
 ```bash
@@ -108,7 +105,7 @@ az monitor diagnostic-settings create \
 ## 5. Try Using One of Your Keys Inside an Application
 
 ### Azure Portal
-![Image 1](./1.png)
+![Image 1](./6.png)
 
  example of how to sign or encrypt data using a key stored in the Key Vault in a Python application
 ```python
