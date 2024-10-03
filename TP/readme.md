@@ -28,6 +28,16 @@ Clique sur **"Créer"**.
 
 ### 3. Créer une nouvelle fonction HTTP-triggered
 
-* Va à **Function App** dans le portail et sélectionne ton application (par exemple, myFunctionApp).
+* Va à **Function App** dans le portail ou depuis ton ressource group et sélectionne ton application (par exemple, myFunctionApp).
 
-* Dans le panneau de gauche, clique sur **Fonctions** puis sur + Ajouter.
+* clique sur **Fonctions** dans overview ou menu de gauche puis sur **Create function**.
+
+* Choisis **HTTP trigger** parmi les modèles disponibles.
+
+### Configure les options suivantes :
+
+* **Nom :** Donne un nom à ta fonction, par exemple HelloWorldFunction.
+
+* **Niveau d'autorisation :** Sélectionne Anonyme (cela signifie que n'importe qui peut appeler cette fonction sans authentification).
+
+* Clique sur **Créer**.
